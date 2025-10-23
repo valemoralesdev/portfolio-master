@@ -11,6 +11,18 @@ import Projects from "@/components/Projects.astro";
 import WorkIcon from "@/components/icons/WorkIcon.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import BootstrapIcon from "@/components/icons/BootstrapIcon.astro";
+import MySQLIcon from "@/components/icons/MySQLIcon.astro";
+import PostgreIcon from "@/components/icons/PostgreIcon.astro";
+import Spring from "@/components/icons/SpringIcon.astro";
+import Java from "@/components/icons/Java.astro";
+
+// Definir tipo TagsType (ya que no existe un archivo de tipos)
+type TagsType = Record<string, {
+  name: string;
+  class: string;
+  icon: any;
+}>;
 
 
 export const userData = {
