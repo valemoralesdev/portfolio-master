@@ -98,17 +98,17 @@ export const ui = {
 		},
 
 	es: {
-		"layout.title": "Portfolio de Valentina - Mgt en Física Médica y Bioingeniera",
+		"layout.title": "Portfolio de Valentina - Mgtr en Física Médica y Bioingeniera",
 		"layout.description":
 			"Mgt en Física Médica y Bioingeniera con experiencia Ingeniería Clínica y Biología Molecular. Desarrollo de aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
 		"navbar.experience": "Experiencia",
 		"navbar.projects": "Proyectos",
-		"navbar.about-me": "Sobre",
+		"navbar.about-me": "Sobre mí",
 		"hero.badge": "Tesista en Instituto Balseiro",
 		"hero.greet": "Hey, soy",
-		"hero.rol": "Mgt en Física Médica y Bioingeniera",
+		"hero.rol": "Mgtr en Física Médica y Bioingeniera",
 		"hero.description":
-			"Mgt en Física Médica y Bioingeniera con experiencia Ingeniería Clínica y Biología Molecular. Desarrollo de aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
+			"Mgtr en Física Médica y Bioingeniera con experiencia Ingeniería Clínica y Biología Molecular. Desarrollo de aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
 		"hero.contact": "Contáctame",
 		"hero.resume": "Descargar CV",
 		"index.experience": "Experiencia",
