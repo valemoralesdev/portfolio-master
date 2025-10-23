@@ -58,10 +58,8 @@ console.log(lang);
 			{t("hero.contact")}
 		</SocialPill>
 		<SocialPill
-			href={lang === "en" || lang === "de"
-				? "/documents/resume_en.pdf"
-				: "/documents/resume_es.pdf"}
-			download={`CV_${lang === "de" ? "en" : lang}_${userData.name}`}
+			href={lang === "en" ? "/documents/resume_en.pdf" : "/documents/resume_es.pdf"}
+			download={`CV_${lang}_${userData.name}`}
 		>
 			<DownloadIcon class="size-5" />
 			{t("hero.resume")}
