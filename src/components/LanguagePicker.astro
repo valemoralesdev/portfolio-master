@@ -1,0 +1,77 @@
+---
+import Spain from "@/components/icons/flags/Spain.astro";
+import UnitedKingdom from "@/components/icons/flags/UnitedKingdom.astro";
+import Germany from "@/components/icons/flags/Germany.astro";
+import ArrowIcon from "@/components/icons/ArrowPicker.astro";
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+// Asignar manualmente las banderas a los idiomas
+const getFlagComponent = (code: string) => {
+  switch (code) {
+    case 'en':
+      return UnitedKingdom;
+    case 'es':
+      return Spain;
+    default:
+      return null;
+  }
+};
+
+// Obtener los datos del idioma actual y asignar la bandera
+const currentLocaleData = {
+  ...languages[lang],
+  flag: getFlagComponent(lang)
+};
+
+// Obtener los otros idiomas y asignar manualmente las banderas
+const otherLocales = Object.values(languages)
+  .filter((locale) => locale.code !== lang)
+  .map((locale) => {
+    return {
+      ...locale,
+      flag: getFlagComponent(locale.code)
+    };
+  });
+
+
+---
+
+<div class="relative inline-block text-left">
+	<div
+		class="group text-white rounded-md text-xs font-semibold bg-black/50 hover:bg-black/80 transition-all"
+	>
+		<button
+			type="button"
+			class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+			aria-expanded="true"
+			aria-haspopup="true"
+		>
+            {currentLocaleData.flag && <currentLocaleData.flag />}
+            <span class="hidden sm:inline">{currentLocaleData.name}</span> <!-- Oculto en móvil, visible en pantallas más grandes -->
+
+			<ArrowIcon />
+		</button>
+		<ul
+			class="group-hover:block hidden pt-0.5 absolute w-full"
+		>
+			{
+				otherLocales.map((locale) => (
+					<li class="py-[2px]">
+						<a
+							class="rounded-md bg-black/30 hover:bg-black/80 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+							href={translatePath("/", locale.code)}
+						>
+                            {locale.flag && <locale.flag />}
+                            <span class="hidden sm:inline">{locale.name}</span> <!-- Oculto en móvil, visible en pantallas más grandes -->
+
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</div>

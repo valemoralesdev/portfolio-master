@@ -1,0 +1,107 @@
+---
+import BootstrapIcon from "@/components/icons/BootstrapIcon.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Java from "@/components/icons/Java.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import MySQLIcon from "@/components/icons/MySQLIcon.astro";
+import PostgreIcon from "@/components/icons/PostgreIcon.astro";
+import Spring from "@/components/icons/SpringIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import PythonIcon from "@/components/icons/PythonIcon.astro";
+import FlaskIcon from "@/components/icons/FlaskIcon.astro";
+import FastapiIcon from "@/components/icons/FastapiIcon.astro";
+import DockerIcon from "@/components/icons/DockerIcon.astro";
+import MongodbIcon from "@/components/icons/MongodbIcon.astro";
+import PandasIcon from "@/components/icons/PandasIcon.astro";
+import PlotlyIcon from "@/components/icons/PlotlyIcon.astro";
+import DashIcon from "@/components/icons/DashIcon.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+
+type tLang = (str: any) => any;
+
+const lang = getLangFromUrl(Astro.url);
+const t:tLang = useTranslations(lang);
+
+type TagType = {
+	name: string;
+	class: string;
+	icon: (_props: Record<string, any>) => any;
+};
+
+type TagsType = {
+	[key: string]: TagType;
+};
+
+const TAGS: TagsType = {
+  // ... lo que ya tenías
+  PYTHON:  { name: "Python",  class: "bg-[#3776AB] text-white", icon: PythonIcon },
+	PANDAS:  { name: "Pandas",  class: "bg-[#150458] text-white", icon: PandasIcon },
+	PLOTLY:  { name: "Plotly",  class: "bg-[#3F4AB8] text-white", icon: PlotlyIcon },
+	DASH:    { name: "Dash",    class: "bg-[#0C4B8E] text-white", icon: DashIcon },
+	FLASK:   { name: "Flask",   class: "bg-[#1F2937] text-white", icon: FlaskIcon },   // gris oscuro
+	MONGODB: { name: "MongoDB", class: "bg-[#116149] text-white", icon: MongodbIcon },
+	DOCKER:  { name: "Docker",  class: "bg-[#0DB7ED] text-white", icon: DockerIcon },
+	DICOM:   { name: "DICOM",   class: "bg-[#374151] text-white", icon: CodeIcon },    // neutro
+	ORTHANC: { name: "Orthanc", class: "bg-[#2D3748] text-white", icon: CodeIcon },    // neutro
+
+};
+
+
+
+interface ProjectType {
+	title: string;
+	description: string;
+	github: string;
+	image: string;
+	tags: string[];
+}
+
+const PROJECTS: ProjectType[] = t("projects");
+---
+
+{
+	PROJECTS.map(({ image, title, description, tags, github }) => (
+		<article class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 mb-16">
+			<div class="w-full md:w-1/2">
+				<img
+					alt={`Screenshot of project ${title}`}
+					class="rounded-xl transition duration-500 lg:hover:scale-95"
+					loading="lazy"
+					src={image}
+				/>
+			</div>
+
+			<div class="w-full md:w-1/2">
+				<h3 class="text-2xl font-bold text-gray-100">{title}</h3>
+				<div class="flex flex-wrap mt-2">
+					<nav class="flex flex-wrap gap-3 mt-2">
+						{tags.map((item) => {
+							const tag = TAGS[item];
+							if (tag) {
+								return (
+									<span
+										class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 hover:scale-105 transition-transform cursor-default`}
+									>
+										<tag.icon class="size-4" />
+										{tag.name}
+									</span>
+								);
+							}
+						})}
+					</nav>
+
+					<p class="mt-2 text-gray-300 text-pretty">{description}</p>
+
+					<footer class="mt-4">
+						{github && (
+							<LinkButton href={github}>
+								<GitHub class="size-6" />
+								Code
+							</LinkButton>
+						)}
+					</footer>
+				</div>
+			</div>
+		</article>
+	))
+}

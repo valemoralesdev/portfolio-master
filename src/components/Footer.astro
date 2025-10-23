@@ -1,0 +1,32 @@
+---
+const currentYear = new Date().getFullYear();
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { userData } from "@/pages/index.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="rounded-lg shadow bg-gray-900/50">
+	<div
+		class="text-sm text-gray-500 py-4 px-8 sm:flex md:items-center sm:justify-between text-center"
+	>
+		<span>
+			© {currentYear} &bull; <a
+				href="/#"
+				class="hover:underline cursor-pointer">{userData.name}</a
+			>
+		</span>
+		<nav
+			class="flex flex-wrap justify-center items-center gap-x-5 mt-3 sm:mt-0"
+		>
+			<a href="#about-me" class="hover:underline cursor-pointer">{t('footer.about')}</a>
+			<a
+				href={"mailto:" + userData.mail}
+				class="hover:underline cursor-pointer"
+				>{t('footer.contact')}
+			</a>
+		</nav>
+	</div>
+</footer>

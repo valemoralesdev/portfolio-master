@@ -1,0 +1,80 @@
+---
+import { userData } from "@/pages/index.astro";
+
+import Badge from "@/components/Badge.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import Linkedin from "@/components/icons/Linkedin.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Mail from "@/components/icons/Mail.astro";
+import DownloadIcon from "@/components/icons/DownloadIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+console.log(lang);
+---
+
+<div class="max-w-2xl text-white">
+	<div class="flex gap-x-4">
+		<img
+		src="/images/me.webp"
+		alt={userData.name}
+		width="64"
+		height="64"
+		class="size-16 rounded-full object-cover aspect-square shrink-0"
+		/>
+		<a
+			href={userData.linkedin}
+			target="_blank"
+			rel="noopener"
+			class="flex items-center transition hover:scale-105"
+		>
+			<Badge>{t("hero.badge")}</Badge>
+		</a>
+	</div>
+
+	<h1 class="text-5xl font-bold my-5 flex flex-col sm:flex-row gap-4">
+		{t("hero.greet")}
+		<span class="text-gradient">{userData.name}</span>
+	</h1>
+
+	<h2 class="flex flex-col gap-y-2 text-xl text-pretty mt-2 text-gray-300">
+		<span class="text-3xl text-gradient">{t("hero.rol")}</span>
+		{t("hero.description")}
+	</h2>
+
+	<nav class="flex flex-wrap gap-4 mt-7">
+		<SocialPill href={userData.linkedin}>
+			<Linkedin />
+			LinkedIn
+		</SocialPill>
+		<SocialPill href={userData.github}>
+			<GitHub />
+			GitHub
+		</SocialPill>
+		<SocialPill href={`mailto:${userData.mail}`}>
+			<Mail />
+			{t("hero.contact")}
+		</SocialPill>
+		<SocialPill
+			href={lang === "en" || lang === "de"
+				? "/documents/resume_en.pdf"
+				: "/documents/resume_es.pdf"}
+			download={`CV_${lang === "de" ? "en" : lang}_${userData.name}`}
+		>
+			<DownloadIcon class="size-5" />
+			{t("hero.resume")}
+		</SocialPill>
+	</nav>
+</div>
+
+<style>
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 350%;
+		background-position: 0%;
+	}
+</style>

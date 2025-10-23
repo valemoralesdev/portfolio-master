@@ -1,0 +1,71 @@
+---
+import "@fontsource-variable/onest";
+import Header from "@/components/Header.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#7877c6" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/images/og-image.webp" />
+		<meta
+			property="og:image:alt"
+			content="Screenshot of Amador's portfolio"
+		/>
+
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- Background -->
+		<div
+			class="fixed top-0 bottom-0 z-[-10] min-h-screen w-full bg-neutral-950
+            bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+		<Header />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+		color-scheme: light dark;
+	}
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>
