@@ -37,7 +37,7 @@ export const ui = {
 			title: "Physics Fellow",
 			company: "VIDT Oncología Radiante – Instituto Privado de Radioterapia Cuyo",
 			description:
-				"Medical Physics fellowship at a radiotherapy oncology center in Mendoza, Argentina.",
+				"Training as a Radiotherapy Specialist, involved in treatment planning with the Monaco and Eclipse systems, as well as equipment and process quality control.",
 			latest: true,
 			},
 			{
@@ -127,7 +127,7 @@ export const ui = {
 			title: "Becaria en el Área de Física",
 			company: "VIDT Oncología Radiante – Instituto Privado de Radioterapia Cuyo",
 			description:
-			"Beca en el Área de Física en un centro de radioterapia oncológica, en Mendoza.",
+			"Formación como Especialista en Radioterapia, con participación en la planificación de tratamientos mediante los sistemas Monaco y Eclipse, y en controles de calidad de equipamiento y procesos.",
 			latest: true,
 		},
 		{
