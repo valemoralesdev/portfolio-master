@@ -21,7 +21,7 @@ export const ui = {
 		"navbar.experience": "Experience",
 		"navbar.projects": "Projects",
 		"navbar.about-me": "About me",
-		"hero.badge": "Thesis student at Instituto Balseiro",
+		"hero.badge": "Physics Fellow at Instituto Privado de Radioterapia Cuyo",
 		"hero.greet": "Hey, I'm",
 		"hero.rol": "MSc in Medical Physics & Bioengineer",
 		"hero.description":
@@ -33,12 +33,19 @@ export const ui = {
 		"index.about": "About me",
 		exp: [
 			{
+			date: "February 2026 – Present",
+			title: "Physics Fellow",
+			company: "VIDT Oncología Radiante – Instituto Privado de Radioterapia Cuyo",
+			description:
+				"Medical Physics fellowship at a radiotherapy oncology center in Mendoza, Argentina.",
+			latest: true,
+			},
+			{
 			date: "May 2024 – July 2024",
 			title: "Senior Clinical Engineering Technician",
 			company: "Swiss Medical Group",
 			description:
 				"Preventive and corrective maintenance of biomedical equipment. Hospital management (SAP). QA support and technical documentation.",
-			latest: true,
 			},
 			{
 			date: "January 2024 – April 2024",
@@ -104,7 +111,7 @@ export const ui = {
 		"navbar.experience": "Experiencia",
 		"navbar.projects": "Proyectos",
 		"navbar.about-me": "Sobre mí",
-		"hero.badge": "Tesista en Instituto Balseiro",
+		"hero.badge": "Becaria en Física en Instituto Privado de Radioterapia Cuyo",
 		"hero.greet": "Hey, soy",
 		"hero.rol": "Mgtr en Física Médica y Bioingeniera",
 		"hero.description":
@@ -116,12 +123,19 @@ export const ui = {
 		"index.about": "Sobre mí",
 		exp: [
 		{
+			date: "Febrero 2026 – Actualidad",
+			title: "Becaria en el Área de Física",
+			company: "VIDT Oncología Radiante – Instituto Privado de Radioterapia Cuyo",
+			description:
+			"Beca en el Área de Física en un centro de radioterapia oncológica, en Mendoza.",
+			latest: true,
+		},
+		{
 			date: "Mayo 2024 – Julio 2024",
 			title: "Técnica Sr. en Ingeniería Clínica",
 			company: "Swiss Medical Group",
 			description:
 			"Mantenimiento preventivo y correctivo de equipamiento biomédico. Gestión hospitalaria (SAP). Apoyo a QA y documentación técnica.",
-			latest: true,
 		},
 		{
 			date: "Enero 2024 – Abril 2024",
