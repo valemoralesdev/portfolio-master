@@ -17,7 +17,7 @@ export const ui = {
 			en: {
 		"layout.title": "Valentina's Portfolio — MSc in Medical Physics & Bioengineer",
 		"layout.description":
-			"MSc in Medical Physics and Bioengineer with experience in Clinical Engineering and Molecular Biology. I build healthcare applications and workflows focused on quality and efficiency.",
+			"MSc in Medical Physics and Bioengineer, currently pursuing further training in radiotherapy. I bring hands-on experience in Clinical Engineering, Molecular Biology, and software development, building healthcare applications and workflows focused on quality and efficiency.",
 		"navbar.experience": "Experience",
 		"navbar.projects": "Projects",
 		"navbar.about-me": "About me",
@@ -25,7 +25,7 @@ export const ui = {
 		"hero.greet": "Hey, I'm",
 		"hero.rol": "MSc in Medical Physics & Bioengineer",
 		"hero.description":
-			"MSc in Medical Physics and Bioengineer with experience in Clinical Engineering and Molecular Biology. I build healthcare applications and workflows focused on quality and efficiency.",
+			"MSc in Medical Physics and Bioengineer, currently pursuing further training in radiotherapy. I bring hands-on experience in Clinical Engineering, Molecular Biology, and software development, building healthcare applications and workflows focused on quality and efficiency.",
 		"hero.contact": "Contact me",
 		"hero.resume": "Download CV",
 		"index.experience": "Experience",
@@ -107,7 +107,7 @@ export const ui = {
 	es: {
 		"layout.title": "Portfolio de Valentina - Mgtr en Física Médica y Bioingeniera",
 		"layout.description":
-			"Mgt en Física Médica y Bioingeniera con experiencia Ingeniería Clínica y Biología Molecular. Desarrollo de aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
+			"Mgtr. en Física Médica y Bioingeniera, actualmente ampliando mi formación en radioterapia oncológica. Cuento con experiencia en Ingeniería Clínica, Biología Molecular y desarrollo de software, diseñando aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
 		"navbar.experience": "Experiencia",
 		"navbar.projects": "Proyectos",
 		"navbar.about-me": "Sobre mí",
@@ -115,7 +115,7 @@ export const ui = {
 		"hero.greet": "Hey, soy",
 		"hero.rol": "Mgtr en Física Médica y Bioingeniera",
 		"hero.description":
-			"Mgtr en Física Médica y Bioingeniera con experiencia Ingeniería Clínica y Biología Molecular. Desarrollo de aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
+			"Mgtr. en Física Médica y Bioingeniera, actualmente ampliando mi formación en radioterapia oncológica. Cuento con experiencia en Ingeniería Clínica, Biología Molecular y desarrollo de software, diseñando aplicaciones y flujos de trabajo para salud con foco en calidad y eficiencia.",
 		"hero.contact": "Contáctame",
 		"hero.resume": "Descargar CV",
 		"index.experience": "Experiencia",
