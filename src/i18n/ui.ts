@@ -94,7 +94,7 @@ export const ui = {
 			I'm <strong>Valentina</strong>, a Bioengineer and <strong>MSc in Medical Physics</strong>. I chose this path to make a tangible impact: the clinical setting connects me with the <strong>real needs</strong> of patients and healthcare teams and lets me iterate with <strong>direct feedback</strong>.
 		</p>
 		<p>
-			I blend <strong>engineering, science, and programming</strong> to turn everyday problems into <strong>sustainable solutions</strong>: automations, apps, and reproducible <em>pipelines</em> that streamline workflows and traceability. I'm excited by <strong>medical imaging</strong>, DICOM, QA, and data analysis that leads to <strong>useful decisions</strong>.
+			Today I work in oncology <strong>Radiotherapy</strong>: I take part in <strong>treatment planning</strong> with systems like Monaco and Eclipse, in <strong>equipment and process quality control</strong>, and in ensuring the precision and safety of every treatment. I complement this clinical work with <strong>programming</strong> to automate checks, streamline workflows, and improve traceability across medical imaging, DICOM, and QA data.
 		</p>
 		<p>
 			I'm <strong>self-taught</strong>, <strong>responsible</strong>, and <strong>organized</strong>. I enjoy <strong>challenges</strong> and continuous learning. I come from <strong>volleyball</strong>, so I believe in <strong>teamwork</strong> as the way to reach goals.
@@ -183,7 +183,7 @@ export const ui = {
 			Soy <strong>Valentina</strong>, Bioingeniera y <strong>Magíster en Física Médica</strong>. Elegí este camino para ayudar de forma concreta: el entorno clínico me conecta con las <strong>necesidades reales</strong> de pacientes y equipos de salud, y me permite iterar con <strong>feedback directo</strong>.
 			</p>
 			<p>
-			Cruzo <strong>ingeniería, ciencia y programación</strong> para transformar problemas diarios en <strong>soluciones sostenibles</strong>: automatizaciones, apps y <em>pipelines</em> reproducibles que ordenan el flujo de trabajo y la trazabilidad. Me entusiasman las <strong>imágenes médicas</strong>, DICOM, QA y el análisis de datos que termina en <strong>decisiones útiles</strong>.
+			Hoy me desempeño en <strong>Radioterapia</strong> oncológica: participo en la <strong>planificación de tratamientos</strong> con sistemas como Monaco y Eclipse, en <strong>controles de calidad</strong> de equipos y procesos, y en garantizar la precisión y seguridad de cada tratamiento. Complemento ese trabajo clínico con <strong>programación</strong> para automatizar controles, ordenar el flujo de trabajo y mejorar la trazabilidad en imágenes médicas, DICOM y datos de QA.
 			</p>
 			<p>
 			Soy <strong>autodidacta</strong>, <strong>responsable</strong> y <strong>organizada</strong>. Disfruto los <strong>desafíos</strong> y aprender todo el tiempo. Vengo del <strong>voleibol</strong>, así que creo en el <strong>trabajo en equipo</strong> como la forma de alcanzar objetivos.
